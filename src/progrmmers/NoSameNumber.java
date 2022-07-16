@@ -8,7 +8,7 @@ public class NoSameNumber {
             List<Integer> list = new ArrayList<>();
             int len = arr.length;
             int temp = -1;
-            for(int i = 0; i < len - 1; i++){
+            for(int i = 0; i < len; i++){
                 if(temp != arr[i]){
                     list.add(arr[i]);
                 }
