@@ -1,7 +1,7 @@
 package progrmmers;
 import java.util.*;
 
-public class reporting_answer {
+public class ReportingAnswer {
     /*
     프로그래머스 신고 결과 받기(시간 초과)
      */

@@ -1,7 +1,7 @@
 package progrmmers;
 import java.util.*;
 
-public class reporting_answer_refactoring {
+public class ReportingAnswerRefactoring {
     /*
     프로그래머스 신고 결과 받기 Map 활용(성공)
      */
