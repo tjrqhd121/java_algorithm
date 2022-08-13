@@ -10,12 +10,15 @@ public class Budget {
         Arrays.sort(d);
         for(int i = 0; i < d.length; i++){
             sum += d[i];
+            // 예산을 넘길 때
             if(sum > budget){
                 answer = i;
                 break;
+            //예산이 딱 떨어질 때
             }else if(sum == budget){
                 answer = i + 1;
                 break;
+            //예산이 남을 때
             }else{
                 answer = d.length;
             }
