@@ -43,46 +43,38 @@ public class NoticeBoard {
             }
         }
     }
+}
 
-    private static class Board {
-        private int id = 0;
-        private static int seq = 0;
-        private String title;
-        private String name;
-        private String dateTime;
-
-        public Board(String title, String name, String dateTime) {
-            this.title = title;
-            this.name = name;
-            this.dateTime = dateTime;
-            ++seq;
-            this.id += seq;
-        }
-
-        public int getId() { return id; }
-
-        public String getDateTime() {
-            return dateTime;
-        }
-
-        public void setDateTime(String dateTime) {
-            this.dateTime = dateTime;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
+class Board {
+    private int id = 0;
+    private static int seq = 0;
+    private String title;
+    private String name;
+    private String dateTime;
+    public Board(String title, String name, String dateTime) {
+        this.title = title;
+        this.name = name;
+        this.dateTime = dateTime;
+        ++seq;
+        this.id += seq;
+    }
+    public int getId() { return id; }
+    public String getDateTime() {
+        return dateTime;
+    }
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 }
