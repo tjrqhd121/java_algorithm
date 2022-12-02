@@ -1,16 +1,16 @@
 package progrmmers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class splitString {
 
     public static void main(String[] args){
-        System.out.println(solution("aababvfvcddda"));
+        System.out.println(solutionV1("aababvfvcddda"));
+        System.out.println(solutionV2("aababvfvcddda"));
     }
 
-    private static int solution(String s) {
+    private static int solutionV1(String s) {
         int answer = 0;
 
         List<Character> sameAlphabet = new ArrayList<>();
@@ -33,8 +33,41 @@ public class splitString {
                 elseAlphabet.clear();
             }
         }
+
         if(sameAlphabet.size() != 0){
             answer++;
+        }
+
+        return answer;
+    }
+
+    /**
+     * 속도 개선 및 리펙토링 버전
+     */
+    private static int solutionV2(String s){
+        int answer = 0;
+        int xCnt = 0;
+        int elseCnt = 0;
+        int x = ' ';
+
+        for (int i = 0; i < s.length(); i++) {
+            if(xCnt == 0){
+                x = s.charAt(i);
+                xCnt++;
+                answer++;
+                continue;
+            }
+
+            if(x == s.charAt(i)){
+                xCnt++;
+            } else {
+                elseCnt++;
+            }
+
+            if(xCnt == elseCnt){
+                xCnt = 0;
+                elseCnt = 0;
+            }
         }
 
         return answer;
