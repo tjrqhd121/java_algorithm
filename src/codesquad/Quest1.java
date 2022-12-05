@@ -135,7 +135,7 @@ public class Quest1 {
     private static void printCircle(char[][] circle) {
         for (char[] chars : circle) {
             for (char ink : chars) {
-                System.out.println(print(ink));
+                System.out.print(print(ink));
             }
             System.out.println();
         }
